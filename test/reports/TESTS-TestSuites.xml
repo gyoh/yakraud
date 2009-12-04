@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="edmonton" id="0" name="MessageIntegrationTests" package="com.yakraud" tests="1" time="0.386" timestamp="2009-10-02T01:42:29">
+      <properties />
+
+      <testcase classname="com.yakraud.MessageIntegrationTests" name="testSendingMessage" time="0.363" />
+
+      <system-out><![CDATA[--Output from testSendingMessage--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSendingMessage--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="edmonton" id="1" name="PostFlowIntegrationTestTests" package="com.yakraud" tests="1" time="0.33" timestamp="2009-10-02T01:42:30">
+      <properties />
+
+      <testcase classname="com.yakraud.PostFlowIntegrationTestTests" name="testBasicFlow" time="0.328" />
+
+      <system-out><![CDATA[--Output from testBasicFlow--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testBasicFlow--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="edmonton" id="2" name="ProjectIntegrationTests" package="com.yakraud" tests="3" time="0.424" timestamp="2009-10-02T01:42:29">
+      <properties />
+
+      <testcase classname="com.yakraud.ProjectIntegrationTests" name="testSave" time="0.035" />
+
+      <testcase classname="com.yakraud.ProjectIntegrationTests" name="testRetrieve" time="0.039" />
+
+      <testcase classname="com.yakraud.ProjectIntegrationTests" name="testParticipatingProject" time="0.34" />
+
+      <system-out><![CDATA[--Output from testSave--
+--Output from testRetrieve--
+--Output from testParticipatingProject--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSave--
+--Output from testRetrieve--
+--Output from testParticipatingProject--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="edmonton" id="3" name="QueryIntegrationTests" package="com.yakraud" tests="2" time="0.413" timestamp="2009-10-02T01:42:30">
+      <properties />
+
+      <testcase classname="com.yakraud.QueryIntegrationTests" name="testBasicDynamicFinders" time="0.136" />
+
+      <testcase classname="com.yakraud.QueryIntegrationTests" name="testQueryByCriteria" time="0.272" />
+
+      <system-out><![CDATA[--Output from testBasicDynamicFinders--
+--Output from testQueryByCriteria--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testBasicDynamicFinders--
+--Output from testQueryByCriteria--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="edmonton" id="4" name="UserIntegrationTests" package="com.yakraud" tests="5" time="0.216" timestamp="2009-10-02T01:42:29">
+      <properties />
+
+      <testcase classname="com.yakraud.UserIntegrationTests" name="testSave" time="0.038" />
+
+      <testcase classname="com.yakraud.UserIntegrationTests" name="testSaveAndUpdate" time="0.034" />
+
+      <testcase classname="com.yakraud.UserIntegrationTests" name="testSaveThenDelete" time="0.062" />
+
+      <testcase classname="com.yakraud.UserIntegrationTests" name="testEvilSave" time="0.038" />
+
+      <testcase classname="com.yakraud.UserIntegrationTests" name="testEvilSaveCorrected" time="0.029" />
+
+      <system-out><![CDATA[--Output from testSave--
+--Output from testSaveAndUpdate--
+--Output from testSaveThenDelete--
+--Output from testEvilSave--
+--Output from testEvilSaveCorrected--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSave--
+--Output from testSaveAndUpdate--
+--Output from testSaveThenDelete--
+--Output from testEvilSave--
+--Output from testEvilSaveCorrected--
+]]></system-err>
+
+  </testsuite>
+</testsuites>
