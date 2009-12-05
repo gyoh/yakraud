@@ -74,3 +74,8 @@ log4j = {
 
     warn   'org.mortbay.log'
 }
+
+navigation.tabs = [
+    [controller:'project',title:'myYakra',action:'myProjects'],
+    [controller:'project',title:'Search',action:'search']
+]

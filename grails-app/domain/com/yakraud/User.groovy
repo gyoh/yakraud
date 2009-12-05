@@ -5,23 +5,23 @@ package com.yakraud
  */
 class User implements Serializable {
 
-	/** Username */
-	String username
-	/** User Real Name*/
-	String userRealName
-	/** MD5 Password */
-	String passwd
-	/** enabled */
-	boolean enabled
+    /** Username */
+    String username
+    /** User Real Name*/
+    String userRealName
+    /** MD5 Password */
+    String passwd
+    /** enabled */
+    boolean enabled
 
-	String email
-	boolean emailShow
+    String email
+    boolean emailShow
 
-	/** description */
-	String description = ''
+    /** description */
+    String description = ''
 
-	/** plain password to create a MD5 password */
-	String pass = '[secret]'
+    /** plain password to create a MD5 password */
+    String pass = '[secret]'
 
     Profile profile
 
@@ -32,16 +32,16 @@ class User implements Serializable {
         except = ["pass"]
     }
 
-	static constraints = {
-		username(blank: false, unique: true, size: 3..12)
-		userRealName(blank: false)
-		pass(blank: false, size: 8..16)
-		enabled()
+    static constraints = {
+        username(blank: false, unique: true, size: 3..12)
+        userRealName(blank: false)
+        pass(blank: false, size: 8..16)
+        enabled()
         email(blank: false, unique: true, email: true)
         profile(nullable: true)
-	}
+    }
 
-	static transients = ['pass']
+    static transients = ['pass']
 
     static mapping = {
         profile lazy:false
@@ -49,7 +49,7 @@ class User implements Serializable {
 
     static belongsTo = Role
 
-	static hasMany = [
+    static hasMany = [
         authorities: Role,
         ownedProjects: Project,
         applications: Application,

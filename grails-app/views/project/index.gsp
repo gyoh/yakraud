@@ -2,17 +2,6 @@
   <head>
     <title>Projects</title>
     <meta name="layout" content="main" />
-    <g:render template="/jquery" />
-    <g:javascript>
-        $(function() {
-        	oTable = $('#dataTable').dataTable({
-        		"bJQueryUI": true,
-        		"sPaginationType": "full_numbers",
-        		"bServerSide": true,
-                "sAjaxSource": "listAjax"
-        	});
-        });
-    </g:javascript>
   </head>
   <body>
     <h1>Projects</h1>

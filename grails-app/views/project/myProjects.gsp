@@ -2,31 +2,7 @@
   <head>
     <title>My Projects for ${user.username}</title>
     <meta name="layout" content="main" />
-    <g:render template="/jquery" />
-    <g:javascript>
-      $(function() {
-		$("#tabs").tabs();
-      });
-
-      $(function() {
-        $('#deadline').datepicker();
-      });
-
-      $(function() {
-        oTable = $('#dataTable').dataTable({
-          "bJQueryUI": true,
-          "sPaginationType": "full_numbers",
-          "bProcessing": true,
-          "bServerSide": true,
-          "sAjaxSource": "/yakraud/project/listAjax",
-          "fnInitComplete": function () {
-            $(oTable.fnGetNodes()).click(function () {
-              alert();
-            });
-          }
-        });
-      });
-    </g:javascript>
+    <gui:resources components="tabView, dataTable, richEditor" mode="minimal" />
   </head>
   <body>
     <!--
@@ -54,61 +30,29 @@
     </p>
     -->
 
-    <div id="tabs">
-      <ul>
-        <li><a href="#tabs-1">My Projects</a></li>
-        <li><a href="#tabs-2">Applied Projects</a></li>
-        <li><a href="#tabs-3">Messages</a></li>
-      </ul>
-      <div id="tabs-1">
-        <div id="demo">
-          <table cellpadding="0" cellspacing="0" border="0" class="display" id="dataTable">
-            <thead>
-              <tr>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Content</th>
-                <th>Reward</th>
-                <th>Deadline</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td colspan="5" class="dataTables_empty">Loading data from server</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Content</th>
-                <th>Reward</th>
-                <th>Deadline</th>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
-      </div>
-      <div id="tabs-2">
-        <p>Tab 2 content</p>
-      </div>
-      <div id="tabs-3">
-        <div id="myProjects" class="myProjects">
-          <g:each in="${user.ownedProjects}" var="project">
-            <div class="project">
-              <div class="projectTitle">${project.title}</div>
-              <div class="projectDescrition">${project.description}</div>
-              <div class="projectReward">${project.reward}</div>
-              <div class="projectDeadline">${project.deadline}</div>
-              <div class="projectSolution">
-                <g:link controller="solution" action="submit" id="${project.id}">
-                  Submit solution
-                </g:link>
-              </div>
-            </div>
-          </g:each>
-        </div>
-      </div>
-    </div>
-    </body>
+    <gui:tabView>
+      <gui:tab label="My Projects" active="true">
+        <gui:dataTable
+          id="myProjects"
+          draggableColumns="true"
+          columnDefs="[
+            [key:'id', sortable:true, resizeable: true, label:'ID'],
+            [key:'title', sortable:true, resizeable: true, label:'Title'],
+            [key:'description', sortable:true, resizeable: true, label:'Description'],
+            [key:'reward', type:'currency', sortable:true, resizeable: true, label: 'Reward'],
+            [key:'deadline', type:'date', sortable:true, resizeable: true, label: 'Dealine'],
+          ]"
+          controller="project" action="listAjax"
+          rowClickNavigation="true"
+        />
+      </gui:tab>
+      <gui:tab label="Applied Projects">
+          <h2>Inside Tab 2</h2>
+          <gui:richEditor id='editor' value="You can use gui components within tabs, too!"/>
+      </gui:tab>
+      <gui:tab label="Messages">
+          <h2>Inside Tab 3</h2>
+      </gui:tab>
+    </gui:tabView>
+  </body>
 </html>

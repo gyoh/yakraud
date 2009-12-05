@@ -43,6 +43,11 @@ class ProjectController {
 
     def scaffold = true
 
+//    static navigation = [
+//        [group: "tabs", action: "myProjects", title: "My Projects", order: 0],
+//        [group: "tabs", action: "search", title: "Search", order: 1]
+//    ]
+
     def index = {
     }
 
@@ -144,6 +149,7 @@ class ProjectController {
                var: "project")
     }
 
+    @Secured(['ROLE_USER'])
     def listAjax = {
         /*
         def results = Project.withCriteria {
@@ -153,6 +159,7 @@ class ProjectController {
         }
         */
 
+        /*
         def query = params.sSearch
         def offset = params.iDisplayStart as int
         def max = params.iDisplayLength as int
@@ -194,6 +201,28 @@ class ProjectController {
         }
 
         render json as JSON
+        */
+
+        def user = authenticateService.userDomain()
+        user = User.get(user.id)
+        def list = []
+        def projects = Project.list(params)
+        response.setHeader("Cache-Control", "no-store")
+        projects.each {
+            list << [
+                id: it.id,
+                title: it.title,
+                description: it.description,
+                reward: it.reward,
+                dealine: it.deadline,
+                dataUrl: g.createLink(action: 'details') + "/$it.id"
+            ]
+        }
+        def data = [
+            totalRecords: Project.count(),
+            results: list
+        ]
+        render data as JSON
     }
 
     def details = {
