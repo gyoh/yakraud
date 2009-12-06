@@ -10,7 +10,9 @@ class BootStrap {
         switch (Environment.current) {
             case Environment.DEVELOPMENT:
                 createAdminUser()
-                createUser()
+                createUser("gyo", "Gyo Hamamoto")
+                createUser("haru", "Haru Hamamoto")
+                createUser("shun", "Shun Hamamoto")
                 break;
             case Environment.TEST:
                 createRoles()
@@ -57,21 +59,21 @@ class BootStrap {
         }
     }
 
-    void createUser() {
-        if (!User.findByUsername("gyo")) {
+    void createUser(String username, String realName) {
+        if (!User.findByUsername(username)) {
             def userRole = Role.findByAuthority("ROLE_USER")
             if (!userRole) {
                 createRoles()
                 userRole = Role.findByAuthority("ROLE_USER")
             }
-            println("Creating general user")
+            println("Creating general user ${username}")
             def user = new User(
-                username: "gyo",
-                userRealName: "Gyo Hamamoto",
+                username: username,
+                userRealName: realName,
                 pass: "password",
                 passwd: authenticateService.encodePassword("password"),
                 enabled: true,
-                email: "gyo@yakraud.com",
+                email: "${username}@yakraud.com",
                 description: "General user"
             )
             userRole.addToPeople(user)

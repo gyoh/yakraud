@@ -13,7 +13,7 @@
         <div class="db2_content">
           <div class="db2_content_container">
             <h3>SearchBox</h3>
-            <g:form action="search">
+            <g:form>
               <g:textField name="q" value="${params.q}"/>
               <g:select name="max" from="${[5, 10, 50]}"
                         value="${params.max ?: 10}" /> hits

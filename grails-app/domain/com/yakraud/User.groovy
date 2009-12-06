@@ -77,4 +77,8 @@ class User implements Serializable {
         return appliedProjects()
     }
 
+    String toString() {
+        "${id}: ${username}"
+    }
+
 }

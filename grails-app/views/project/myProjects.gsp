@@ -38,17 +38,26 @@
           columnDefs="[
             [key:'id', sortable:true, resizeable: true, label:'ID'],
             [key:'title', sortable:true, resizeable: true, label:'Title'],
-            [key:'description', sortable:true, resizeable: true, label:'Description'],
             [key:'reward', type:'currency', sortable:true, resizeable: true, label: 'Reward'],
-            [key:'deadline', type:'date', sortable:true, resizeable: true, label: 'Dealine'],
+            [key:'deadline', type:'date', sortable:true, resizeable: true, label: 'Deadline'],
           ]"
-          controller="project" action="listAjax"
+          controller="project" action="listOwned"
           rowClickNavigation="true"
         />
       </gui:tab>
       <gui:tab label="Applied Projects">
-          <h2>Inside Tab 2</h2>
-          <gui:richEditor id='editor' value="You can use gui components within tabs, too!"/>
+        <gui:dataTable
+          id="appliedProjects"
+          draggableColumns="true"
+          columnDefs="[
+            [key:'id', sortable:true, resizeable: true, label:'ID'],
+            [key:'title', sortable:true, resizeable: true, label:'Title'],
+            [key:'reward', type:'currency', sortable:true, resizeable: true, label: 'Reward'],
+            [key:'deadline', type:'date', sortable:true, resizeable: true, label: 'Deadline'],
+          ]"
+          controller="project" action="listApplied"
+          rowClickNavigation="true"
+        />
       </gui:tab>
       <gui:tab label="Messages">
           <h2>Inside Tab 3</h2>

@@ -45,4 +45,8 @@ class Project implements Serializable {
         return applicants();
     }
 
+    String toString() {
+        "${id}: ${title} (${owner.username})"
+    }
+
 }

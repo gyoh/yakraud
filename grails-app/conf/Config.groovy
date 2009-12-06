@@ -76,6 +76,7 @@ log4j = {
 }
 
 navigation.tabs = [
-    [controller:'project',title:'myYakra',action:'myProjects'],
-    [controller:'project',title:'Search',action:'search']
+    [title:'Home',order:'0'],
+    [title:'My Yakra',controller:'project',action:'myProjects',order:'1'],
+    [title:'Search',controller:'search',order:'2']
 ]

@@ -51,40 +51,6 @@ class ProjectController {
     def index = {
     }
 
-    def search = {
-        def query = params.q
-
-        if (!query) {
-            return [:]
-        }
-
-        try {
-            params.withHighlighter = {highlighter, index, sr ->
-                // lazy-init the list of highlighted search results
-                if (!sr.highlights) {
-                    sr.highlights = []
-                }
-
-                // store highlighted text;
-                // "description" is a searchable-property of the
-                // Project domain class
-                def matchedFragment = highlighter.fragment("description")
-                sr.highlights[index] = "..." +
-                    (matchedFragment ?: "") + "..."
-            }
-
-            params.suggestQuery = true
-
-            if (params.justMine) {
-                query += " +username:${authenticateService.userDomain().username}"
-            }
-            def searchResult = Project.search(query, params)
-            return [searchResult: searchResult]
-        } catch(e) {
-            return [searchError: true]
-        }
-    }
-
     def results = {
         def projects = Project.findAllByTitleOrDescriptionIlike("%${params.keyword}%", "%${params.keyword}%")
         return [ projects: projects, term: params.keyword ]
@@ -149,7 +115,6 @@ class ProjectController {
                var: "project")
     }
 
-    @Secured(['ROLE_USER'])
     def listAjax = {
         /*
         def results = Project.withCriteria {
@@ -159,7 +124,6 @@ class ProjectController {
         }
         */
 
-        /*
         def query = params.sSearch
         def offset = params.iDisplayStart as int
         def max = params.iDisplayLength as int
@@ -201,27 +165,73 @@ class ProjectController {
         }
 
         render json as JSON
-        */
+    }
 
+    @Secured(['ROLE_USER'])
+    def listOwned = {
         def user = authenticateService.userDomain()
-        user = User.get(user.id)
+
+        def projects = Project.createCriteria().list(params) {
+            eq('owner', user)
+        }
+        def count =  Project.createCriteria().count {
+            eq('owner', user)
+        }
+
         def list = []
-        def projects = Project.list(params)
-        response.setHeader("Cache-Control", "no-store")
         projects.each {
             list << [
                 id: it.id,
                 title: it.title,
                 description: it.description,
                 reward: it.reward,
-                dealine: it.deadline,
+                deadline: it.deadline,
                 dataUrl: g.createLink(action: 'details') + "/$it.id"
             ]
         }
+
         def data = [
-            totalRecords: Project.count(),
+            totalRecords: count,
             results: list
         ]
+
+        response.setHeader("Cache-Control", "no-store")
+        render data as JSON
+    }
+
+    @Secured(['ROLE_USER'])
+    def listApplied = {
+        def user = authenticateService.userDomain()
+
+        def projects = Project.createCriteria().list(params) {
+            applications {
+                eq('user', user)
+            }
+        }
+        def count =  Project.createCriteria().count {
+            applications {
+                eq('user', user)
+            }
+        }
+
+        def list = []
+        projects.each {
+            list << [
+                id: it.id,
+                title: it.title,
+                description: it.description,
+                reward: it.reward,
+                deadline: it.deadline,
+                dataUrl: g.createLink(action: 'details') + "/$it.id"
+            ]
+        }
+
+        def data = [
+            totalRecords: count,
+            results: list
+        ]
+
+        response.setHeader("Cache-Control", "no-store")
         render data as JSON
     }
 
