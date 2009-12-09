@@ -1,0 +1,12 @@
+/* This is the bare minimum needed to create your own theme.
+   In this example, all we're doing is overriding the default
+   color scheme with our own. In the real world, you'd probably
+   want to do more complex operations. */
+
+#hd { background-color:#eee; }
+.block .hd { background-color:#eee; color:#2276bb; border-bottom:10px solid #e6e6e6; }
+.block .bd h2 { color:#edf5ff; }
+.block .bd h3 { color:#edf5ff; }
+.spaces .hd { background-color:transparent; }
+.spaces .hd ul li { background-color:#edf5ff; }
+a { color:#edf5ff; }

@@ -4,6 +4,17 @@
     <meta name="layout" content="main" />
   </head>
   <body>
+      <div id="yui-main">
+        <div class="yui-b">
+          <div class="yui-g">
+            <!-- YOUR DATA GOES HERE -->
+            <g:layoutBody />
+          </div>
+        </div>
+      </div>
+      <div id="sidebar" class="yui-b">
+        <!-- YOUR NAVIGATION GOES HERE -->
+      </div>
     <div class="right_col">
       <!-- design box 2 start -->
       <div class="db2" style="margin-top:0px" >
