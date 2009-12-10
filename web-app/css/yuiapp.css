@@ -1,23 +1,301 @@
-html, body { background-color:#fafafa; color:#222; margin:0; }
+html, body {
+    background: url(../images/bg.png) repeat-x top #fff;
+    color:#333;
+    padding: 0;
+    border-top: 1px solid #f2f2f2;
+    margin:0;
+}
 
 /* Make the page full bleed */
 #doc3 { margin:0; }
 
+/* Tags */
+p {
+    color: #333;
+    font-size: 12px;
+    letter-spacing: .01em;
+    line-height: 1.5em;
+}
+
+h1 {
+    font-size:24px;
+}
+
+h3 {
+    font-size: 12px;
+    color: #000;
+}
+
+h5 {
+    font-size: 12px;
+    font-weight: 100;
+}
+
+h6 {
+    font-size: 12px;
+    font-weight: 100;
+}
+
+a {
+    text-decoration: none;
+    color: #cc0000;
+}
+
+a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+strong {
+    color: #000;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.text_red {
+    color: #cc0000;
+}
+
 /* Header */
-#hd { padding:1.2em 1.5em 0 1.5em; background-color:#7a1818; }
-h1 { font-size:230%; color:#2276bb; margin:0; }
+#hd {
+    height: 85px;
+}
+#hd .logo {
+    float:left;
+}
+#hd .logo h1{
+    margin: 27px 0 0 20px;
+}
+#hd .logo h1.logo_inside {
+    margin: 17px 0 0 20px;
+}
+#hd .logo div {
+    margin: 15px 0 0 20px;
+}
+#hd .logo h3{
+    position: absolute;
+    top: 31px;
+    margin-left: 220px;
+    font-size: 13px;
+}
+#hd .logo h3 a{
+    color: #777 !important;
+}
+#hd .logo h3 span{
+    color: #777;
+    font-size: 10px;
+    margin: 0 5px;
+}
+#hd .header_links {
+    float: right;
+    width: 500px;
+    background: url(/images/tanya_outside_tab.png) no-repeat 222px 0;
+    position:relative;
+    top: -2px;
+}
+#hd .header_links p{
+    position: relative;
+    top: 25px;
+    text-align:right;
+    clear:both;
+    padding-right: 40px;
+}
+#hd .header_links p a{
+    color: #333 !important;
+}
+#hd .header_links div{
+    text-align: right;
+    float: right;
+    position:relative;
+    right: 45px;
+    top: 24px;
+    height: 36px;
+    /*padding-right: 12px;*/
+    font-size: .92em;
+}
+#hd .header_links div a {
+    color: #000 !important;
+}
+#hd .header_links div a:hover{
+    color: #cc0000 !important;
+    text-decoration: none !important;
+}
+#hd span{
+    font-weight: bold;
+}
+#hd small{
+    font-size: 15px;
+    color: #cfcfcf;
+    margin: 0 8px;
+}
 
-#navigation { margin-top:1.5em; background-color:#ddd; height:1%; }
-#navigation ul { margin:0; }
-#navigation li { float:left; display:inline; }
-#navigation li a { display:block; color:#2276bb; text-decoration:none; }
-#navigation li a:hover { text-decoration:underline; }
+/*----- START MAIN NAV -----*/
 
-#navigation_primary li a { font-size:116%; padding:0.4em 1em; }
-#navigation_primary li.navigation_active a { background-color:#fafafa; color:#000; }
+#navigation {
+    width: 720px;
+    height: 29px !important;
+    position: relative;
+    top: -25px;
+    left: 20px;
+    z-index: 2;
+    padding-left: 2px;
+}
+#navigation ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+    float:left;
+}
+#navigation ul li {
+    display:block;
+    margin:0;
+    padding:0;
+    float:left;
+}
+#navigation ul li a{
+    font-weight: normal;
+    font-size: 12px !important;
+    color: #000 !important;
+    background: url(../images/nav_a.png) right -28px no-repeat;
+    padding: 0 5px 0 0 ;
+    border: none;
+    position: relative;
+    display: block;
+    text-decoration: none;
+}
+#navigation ul li a:hover{
+    background: url(../images/nav_a.png) right 1px no-repeat;
+    text-decoration: none !important;
+}
+#navigation ul li a span{
+    display: block;
+    position:relative;
+    left: -1px;
+    padding: 8px 22px 8px 30px;
+    background: url(../images/nav_span.png) left -28px no-repeat;
+}
+#navigation ul li a:hover span{
+    background: url(../images/nav_span.png) left 1px no-repeat;
+}
+#navigation ul li a.active, .main_nav ul li a.active:hover{
+    background: url(../images/nav_a_active.gif) right -1px no-repeat;
+}
+#navigation ul li a.active span, .main_nav ul li a.active:hover span{
+    left: -4px;
+    padding-left: 32px;
+    background: url(../images/nav_span_active.gif) left -1px no-repeat;
+}
+/*----- END MAIN NAV -----*/
 
-#navigation_user { float:right; }
-#navigation_user li a { font-size:93%; padding:0.5em 1em; }
+/*--- LOGIN FORM ---*/
+
+#login #lg_form_container {
+ position: relative;
+ left: 370px;
+}
+
+.lg_outer {
+  float: left;
+}
+.lg_container {
+  background: url(../images/lg_middle.png) repeat-y;
+  float: left;
+  width: 216px;
+  position: relative;
+}
+.lg_top {
+  background: url(../images/lg_top.png) no-repeat;
+  width: 216px;
+  height: 13px;
+  position: absolute;
+}
+* html .lg_top, *:first-child+html .lg_top {
+  position: relative;
+  top: -5px;
+}
+
+.lg_content {
+  width: 200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+.lg_content form {
+  margin: 10px 0 0 10px;
+}
+.lg_content label {
+  font-weight: bold;
+}
+.lg_content input {
+  width: 170px;
+  height: 28px;
+  border: none;
+  margin: 3px 0 7px 0;
+  background: url(../images/lg_textfield.png) no-repeat;
+  padding: 4px 20px 0 5px;
+}
+.lg_content input:focus {
+  background: url(../images/lg_textfield.png) no-repeat 0 -40px;
+}
+.lg_content p.secured {
+  width: 60px;
+  margin: 7px 0 0 60px;
+  font-size: 9px;
+  color: #999;
+}
+.lg_content .lg_signup {
+  width: 60px;
+}
+.lg_content p { /* forgot password*/
+  margin: 10px 0 20px 10px;
+  font-size: 11px;
+  line-height: 20px ;
+}
+.lg_bottom {
+  background: url(../images/lg_bottom.png) no-repeat;
+  width: 216px;
+  height: 96px;
+  position: absolute;
+  bottom: 0;
+}
+
+.lg_button {
+  background: url(../images/lg_btn_right.png) right 0;
+  float: left;
+}
+.lg_button:hover {
+  background: url(../images/lg_btn_right.png) right -38px;
+}
+.lg_button a {
+  float: left;
+  color: #000;
+  padding: 0 1em;
+  font-size: 12px;
+  line-height: 30px;
+  background: url(../images/lg_btn_left.png) left 0 no-repeat;
+  text-decoration: none;
+}
+.lg_button a:hover {
+  background: url(../images/lg_btn_left.png) left -38px no-repeat;
+}
+.lg_notice p {
+  width: 210px;
+  font-size: 11px;
+  margin: 0 auto;
+}
+
+.lg_content #error_message {
+ color: #AA0000;
+ float: right;
+ position: relative;
+ font-style: italic;
+ font-weight: bold;
+ font-size: 10px;
+ top: -107px;
+ left: -10px;
+ text-align: center;
+}
+/* END OF LOGIN FORM */
 
 /* Body */
 #bd { padding:1.5em; }
@@ -118,3 +396,4 @@ abbr, acronym { border-bottom:1px dotted #000; cursor:help; }
 .text-left { text-align:left; }
 .text-right { text-align:right; }
 .text-center { text-align:center; }
+

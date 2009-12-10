@@ -8,7 +8,7 @@
   <span class="currentStep">1</span>
 </g:if>
 <g:else>
-  <g:paginate action="search"
+  <g:paginate action="index"
               params="[q: params.q]"
               total="${searchResult.total}"
               prev="&lt; previous"

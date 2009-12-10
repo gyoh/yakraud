@@ -75,7 +75,7 @@ log4j = {
     warn   'org.mortbay.log'
 }
 
-navigation.primary = [
+navigation.main = [
     [title:'Home',order:'0'],
     [title:'My Yakra',controller:'project',action:'myProjects',order:'1'],
     [title:'Search',controller:'search',order:'2']
