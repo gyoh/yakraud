@@ -56,6 +56,63 @@ strong {
     color: #cc0000;
 }
 
+.main {
+    padding-top: 0;
+    width: 675px;
+    float: left;
+    position: relative;
+    left: 10px;
+    left /*\**/: -5px\9;
+    min-height: 400px;
+}
+
+.title h1 {
+    padding: 0 60px 0 0;
+    margin-top: -7px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.title h1 span {
+    position: relative;
+    top: 3px;
+}
+
+.title {
+  padding: 3px 0 25px 0;
+  text-align: left;
+}
+
+.title h1{
+  float:left;
+}
+
+#block {
+    margin: 0 0 20px 0 ;
+}
+
+#block p {
+    padding: 10px;
+}
+
+.rounded_container_top {
+    padding: 5px 10px;
+    background: url(../images/table_bg.png) 0px -12px no-repeat;
+}
+
+.rounded_container_top h3{
+}
+.rounded_container_middle{
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+}
+.rounded_container_middle p{
+}
+.rounded_container_bottom {
+    height: 10px;
+    background:url(../images/table_bg.png) 0px -1px;
+    margin-bottom: 15px;
+}
+
 /* Header */
 #hd {
     height: 85px;
@@ -89,7 +146,7 @@ strong {
 #hd .header_links {
     float: right;
     width: 500px;
-    background: url(/images/tanya_outside_tab.png) no-repeat 222px 0;
+    /*background: url(../images/outside_tab.png) no-repeat 222px 0;*/
     position:relative;
     top: -2px;
 }
@@ -130,7 +187,6 @@ strong {
 }
 
 /*----- START MAIN NAV -----*/
-
 #navigation {
     width: 720px;
     height: 29px !important;
@@ -187,115 +243,205 @@ strong {
 }
 /*----- END MAIN NAV -----*/
 
-/*--- LOGIN FORM ---*/
+/*----- START FOOTER -----*/
+#ft {
+    width: 400px !important;
+    text-align:center;
+    padding: 5px 0;
+    margin: 30px auto;
+    border-top: 1px solid #cfcfcf;
+}
+#ft p{
+    color: #777;
+    font-size: 11px;
+    margin: 3px 10px;
+}
+#ft a {
+    font-weight: normal;
+}
+/*----- END OF FOOTER -----*/
 
+/*----- SIDEBAR -----*/
+#sidebar {
+    float: right;
+    position:relative;
+    width: 252px;
+    background: url(../images/sidebar.png) right -7px no-repeat #F1F1F1;
+}
+
+#sidebar h1{
+    color: #000;
+    margin-top: 15px;
+    padding-left: 15px;
+    font-size: 12px;
+}
+
+#sidebar ul.sidebar_links, ul#sidebar_billing_info{
+    border-bottom: 1px solid #e1e1e1;
+    margin: 10px 15px 20px 15px;
+    padding-bottom: 15px ;
+    list-style: none;
+}
+
+#sidebar ul.sidebar_links li {
+    list-style: none;
+}
+
+#sidebar ul.sidebar_links li a{
+    background: url(../images/list_arrow.png) no-repeat left -17px ;
+    padding: 0 0 0 10px;
+    line-height: 2em;
+    color: #333;
+}
+#sidebar ul.sidebar_links li a:hover{
+    background: url(../images/list_arrow.png) no-repeat left 2px ;
+    color: #333;
+}
+
+.sidebar_bottom {
+    height: 15px;
+    background: url(../images/sidebar.png) right 8px no-repeat #F1F1F1;
+}
+/*----- END OF SIDEBAR -----*/
+
+/*--- LOGIN FORM ---*/
 #login #lg_form_container {
- position: relative;
- left: 370px;
+    position: relative;
+    left: 370px;
 }
 
 .lg_outer {
-  float: left;
+    float: left;
 }
 .lg_container {
-  background: url(../images/lg_middle.png) repeat-y;
-  float: left;
-  width: 216px;
-  position: relative;
+    background: url(../images/lg_middle.png) repeat-y;
+    float: left;
+    width: 216px;
+    position: relative;
 }
 .lg_top {
-  background: url(../images/lg_top.png) no-repeat;
-  width: 216px;
-  height: 13px;
-  position: absolute;
+    background: url(../images/lg_top.png) no-repeat;
+    width: 216px;
+    height: 13px;
+    position: absolute;
 }
 * html .lg_top, *:first-child+html .lg_top {
-  position: relative;
-  top: -5px;
+    position: relative;
+    top: -5px;
 }
 
 .lg_content {
-  width: 200px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 3;
+    width: 200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
 }
 .lg_content form {
-  margin: 10px 0 0 10px;
+    margin: 10px 0 0 10px;
 }
 .lg_content label {
-  font-weight: bold;
+    font-weight: bold;
 }
 .lg_content input {
-  width: 170px;
-  height: 28px;
-  border: none;
-  margin: 3px 0 7px 0;
-  background: url(../images/lg_textfield.png) no-repeat;
-  padding: 4px 20px 0 5px;
+    width: 170px;
+    height: 28px;
+    border: none;
+    margin: 3px 0 7px 0;
+    background: url(../images/lg_textfield.png) no-repeat;
+    padding: 4px 20px 0 5px;
 }
 .lg_content input:focus {
-  background: url(../images/lg_textfield.png) no-repeat 0 -40px;
+    background: url(../images/lg_textfield.png) no-repeat 0 -40px;
+    outline: none;
 }
 .lg_content p.secured {
-  width: 60px;
-  margin: 7px 0 0 60px;
-  font-size: 9px;
-  color: #999;
+    width: 60px;
+    margin: 7px 0 0 60px;
+    font-size: 9px;
+    color: #999;
 }
 .lg_content .lg_signup {
-  width: 60px;
+    width: 60px;
 }
 .lg_content p { /* forgot password*/
-  margin: 10px 0 20px 10px;
-  font-size: 11px;
-  line-height: 20px ;
+                margin: 10px 0 20px 10px;
+                font-size: 11px;
+                line-height: 20px ;
 }
 .lg_bottom {
-  background: url(../images/lg_bottom.png) no-repeat;
-  width: 216px;
-  height: 96px;
-  position: absolute;
-  bottom: 0;
+    background: url(../images/lg_bottom.png) no-repeat;
+    width: 216px;
+    height: 96px;
+    position: absolute;
+    bottom: 0;
 }
 
 .lg_button {
-  background: url(../images/lg_btn_right.png) right 0;
-  float: left;
+    background: url(../images/lg_btn_right.png) right 0;
+    float: left;
 }
 .lg_button:hover {
-  background: url(../images/lg_btn_right.png) right -38px;
+    background: url(../images/lg_btn_right.png) right -38px;
 }
 .lg_button a {
-  float: left;
-  color: #000;
-  padding: 0 1em;
-  font-size: 12px;
-  line-height: 30px;
-  background: url(../images/lg_btn_left.png) left 0 no-repeat;
-  text-decoration: none;
+    float: left;
+    color: #000;
+    padding: 0 1em;
+    font-size: 12px;
+    line-height: 30px;
+    background: url(../images/lg_btn_left.png) left 0 no-repeat;
+    text-decoration: none;
 }
 .lg_button a:hover {
-  background: url(../images/lg_btn_left.png) left -38px no-repeat;
+    background: url(../images/lg_btn_left.png) left -38px no-repeat;
 }
 .lg_notice p {
-  width: 210px;
-  font-size: 11px;
-  margin: 0 auto;
+    width: 210px;
+    font-size: 11px;
+    margin: 0 auto;
 }
 
 .lg_content #error_message {
- color: #AA0000;
- float: right;
- position: relative;
- font-style: italic;
- font-weight: bold;
- font-size: 10px;
- top: -107px;
- left: -10px;
- text-align: center;
+    color: #AA0000;
+    float: right;
+    position: relative;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 10px;
+    top: -107px;
+    left: -10px;
+    text-align: center;
 }
 /* END OF LOGIN FORM */
+
+.right_link {
+  float: right;
+  font-style: normal !important;
+  font-weight: normal !important;
+}
+
+a.link {
+  float:left;
+  margin-right: 10px;
+  background: url(../images/link_a.png) no-repeat right top;
+  cursor: pointer;
+  color: #333;
+}
+a.link:hover{
+  float:left;
+  background: url(../images/link_a.png) no-repeat right -38px;
+  text-decoration: none;
+}
+
+a.link span {
+  font-size: 12px !important;
+  float: left;
+  background: url(../images/link_span.png) no-repeat left top;
+  padding: 6px 10px 6px 20px;
+}
+a.link:hover span {
+  background: url(../images/link_span.png) no-repeat left -38px;
+}
 
 /* Body */
 #bd { padding:1.5em; }
@@ -303,13 +449,13 @@ h2 { font-size:153.9%; margin-bottom:0.5em; }
 h3 { font-size:153.9%; margin-bottom:0.5em; }
 
 /* Basic block */
-.block { margin-bottom:1.5em; }
+/*.block { margin-bottom:1.5em; }
 .block .hd { background-color:#7a1818; padding:0.7em 1em; color:#fff; border-bottom:10px solid #262626; }
 .block .hd h2, .block .hd h3 { font-size:100%; margin:0; }
 .block .bd { padding:1em; background-color:#fff; }
 .block .bd h2 { color:#7a1818; }
 .block .bd h3 { color:#7a1818; }
-
+*/
 /* Extend block with tabs */
 .tabs .hd { padding:0; }
 .tabs .hd ul { height:1%; }
@@ -380,7 +526,7 @@ ul.biglist li a { display:block; padding:0.5em 0; text-decoration:none; color:#0
 ul.biglist li a:hover { text-decoration:underline; }
 
 /* Footer */
-#ft { text-align:center; font-size:85%; padding:0.5em 1em; color:#262626; }
+/*#ft { text-align:center; font-size:85%; padding:0.5em 1em; color:#262626; }*/
 
 /* Generics */
 p { margin-bottom:1em; }

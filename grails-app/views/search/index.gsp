@@ -71,21 +71,16 @@
     </div>
     <div id="sidebar" class="yui-b">
       <!-- YOUR NAVIGATION GOES HERE -->
-      <div class="block">
-        <div class="hd">
-          <h3>SearchBox</h3>
-        </div>
-        <div class="bd">
-          <g:form>
-            <p>
-            <g:textField class="text" name="q" value="${params.q}"/>
-            </p>
-            <p>
-            <g:submitButton name="search" value="Search"/>
-            </p>
-          </g:form>
-        </div>
-      </div>
+      <h1>SearchBox</h1>
+      <g:form>
+        <p>
+        <g:textField class="text" name="q" value="${params.q}"/>
+        </p>
+        <p>
+        <g:submitButton name="search" value="Search"/>
+        </p>
+      </g:form>
+      <div class="sidebar_bottom"><!--sidebar_bottom--></div>
     </div>
   </body>
 </html>
