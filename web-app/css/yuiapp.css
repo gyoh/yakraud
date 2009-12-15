@@ -2,7 +2,7 @@ html, body {
     background: url(../images/bg.png) repeat-x top #fff;
     color:#333;
     padding: 0;
-    border-top: 1px solid #f2f2f2;
+    /*border-top: 1px solid #f2f2f2;*/
     margin:0;
 }
 
@@ -21,9 +21,15 @@ h1 {
     font-size:24px;
 }
 
+h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
 h3 {
     font-size: 12px;
     color: #000;
+    margin: 0;
 }
 
 h5 {
@@ -78,7 +84,7 @@ strong {
 }
 
 .title {
-  padding: 3px 0 25px 0;
+  padding: 3px 0 50px 0;
   text-align: left;
 }
 
@@ -115,10 +121,11 @@ strong {
 
 /* Header */
 #hd {
-    height: 85px;
+    height: 90px;
 }
 #hd .logo {
     float:left;
+    height: 56px;
 }
 #hd .logo h1{
     margin: 27px 0 0 20px;
@@ -148,27 +155,22 @@ strong {
     width: 500px;
     /*background: url(../images/outside_tab.png) no-repeat 222px 0;*/
     position:relative;
-    top: -2px;
+    right: 20px;
 }
-#hd .header_links p{
+#hd .header_links p {
     position: relative;
-    top: 25px;
+    top: 40px;
     text-align:right;
     clear:both;
-    padding-right: 40px;
 }
-#hd .header_links p a{
+#hd .header_links p a {
     color: #333 !important;
 }
-#hd .header_links div{
-    text-align: right;
+#hd .header_links div {
     float: right;
     position:relative;
-    right: 45px;
-    top: 24px;
-    height: 36px;
-    /*padding-right: 12px;*/
-    font-size: .92em;
+    right: 8px;
+    top: 22px;
 }
 #hd .header_links div a {
     color: #000 !important;
@@ -187,28 +189,28 @@ strong {
 }
 
 /*----- START MAIN NAV -----*/
-#navigation {
+.navigation {
     width: 720px;
     height: 29px !important;
     position: relative;
-    top: -25px;
+    top: 5px;
     left: 20px;
     z-index: 2;
-    padding-left: 2px;
+    clear: both;
 }
-#navigation ul {
+.navigation ul {
     list-style:none;
     margin:0;
     padding:0;
     float:left;
 }
-#navigation ul li {
+.navigation ul li {
     display:block;
     margin:0;
     padding:0;
     float:left;
 }
-#navigation ul li a{
+.navigation ul li a {
     font-weight: normal;
     font-size: 12px !important;
     color: #000 !important;
@@ -219,24 +221,24 @@ strong {
     display: block;
     text-decoration: none;
 }
-#navigation ul li a:hover{
+.navigation ul li a:hover {
     background: url(../images/nav_a.png) right 1px no-repeat;
     text-decoration: none !important;
 }
-#navigation ul li a span{
+.navigation ul li a span {
     display: block;
     position:relative;
     left: -1px;
     padding: 8px 22px 8px 30px;
     background: url(../images/nav_span.png) left -28px no-repeat;
 }
-#navigation ul li a:hover span{
+.navigation ul li a:hover span{
     background: url(../images/nav_span.png) left 1px no-repeat;
 }
-#navigation ul li a.active, .main_nav ul li a.active:hover{
+.navigation ul li a.active {
     background: url(../images/nav_a_active.gif) right -1px no-repeat;
 }
-#navigation ul li a.active span, .main_nav ul li a.active:hover span{
+.navigation ul li a.active span {
     left: -4px;
     padding-left: 32px;
     background: url(../images/nav_span_active.gif) left -1px no-repeat;
@@ -307,7 +309,7 @@ strong {
 /*--- LOGIN FORM ---*/
 #login #lg_form_container {
     position: relative;
-    left: 370px;
+    left: 86px;
 }
 
 .lg_outer {
@@ -444,9 +446,7 @@ a.link:hover span {
 }
 
 /* Body */
-#bd { padding:1.5em; }
-h2 { font-size:153.9%; margin-bottom:0.5em; }
-h3 { font-size:153.9%; margin-bottom:0.5em; }
+#bd { padding: 20px; }
 
 /* Basic block */
 /*.block { margin-bottom:1.5em; }

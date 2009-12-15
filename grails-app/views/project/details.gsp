@@ -9,7 +9,9 @@
         <div class="yui-g">
           <!-- YOUR DATA GOES HERE -->
           <div class="title">
-            <h1>Project Details</h1>
+            <h1>
+              <span>Project Details</span>
+            </h1>
             <div class="right_link">
               <a href="#" class="link">
                 <span>Apply to this Project</span>
@@ -37,8 +39,9 @@
         </div>
       </div>
     </div>
-    <div id="sidebar" class="yui-b">
+    <div class="yui-b">
       <!-- YOUR NAVIGATION GOES HERE -->
+      <div id="sidebar">
       <h1>Award</h1>
       <ul class="sidebar_links">
         <li>${project.reward}</li>
@@ -53,6 +56,7 @@
         <li>${project.file}</li>
       </ul>
       <div class="sidebar_bottom"><!--sidebar_bottom--></div>
+      </div>
     </div>
   </body>
 </html>

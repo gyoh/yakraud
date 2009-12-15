@@ -14,7 +14,7 @@
   <nav:resources override="true" />
 </head>
 <body class="yui-skin-sam">
-  <div id="doc4" class="yui-t5">
+  <div id="doc4" class="yui-t6">
     <div id="hd" role="banner">
       <div class="logo">
         <h1 class="logo_inside">
@@ -49,20 +49,20 @@
           </g:isNotLoggedIn>
         </p>
       </div>
-    </div>
-    <div id="navigation">
-      <ul class="navigation">
-        <nav:eachItem group="main" var="nav">
-          <li>
-          <g:if test="${nav.active}">
-            <a class="active" href="${nav.link}"><span>${nav.title}</span></a>
-          </g:if>
-          <g:else>
-            <a href="${nav.link}"><span>${nav.title}</span></a>
-          </g:else>
-          </li>
-        </nav:eachItem>
-      </ul>
+      <div class="navigation">
+        <ul>
+          <nav:eachItem group="main" var="nav">
+            <li>
+            <g:if test="${nav.active}">
+              <a class="active" href="${nav.link}"><span>${nav.title}</span></a>
+            </g:if>
+            <g:else>
+              <a href="${nav.link}"><span>${nav.title}</span></a>
+            </g:else>
+            </li>
+          </nav:eachItem>
+        </ul>
+      </div>
     </div>
     <div id="bd" role="main">
       <g:layoutBody />
