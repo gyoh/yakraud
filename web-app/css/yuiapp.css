@@ -309,7 +309,8 @@ strong {
 /*--- LOGIN FORM ---*/
 #login #lg_form_container {
     position: relative;
-    left: 86px;
+    top: 15px;
+    left: 359px;
 }
 
 .lg_outer {
