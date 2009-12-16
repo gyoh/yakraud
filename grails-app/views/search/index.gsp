@@ -6,7 +6,7 @@
   <body>
     <div id="yui-main">
       <div class="yui-b">
-        <div class="yui-g">
+        <div class="yui-g main">
           <!-- YOUR DATA GOES HERE -->
           <g:if test="${searchResult?.results}">
             <g:render template="/suggestions" />
@@ -69,7 +69,7 @@
         </div>
       </div>
     </div>
-    <div id="sidebar" class="yui-b">
+    <div class="yui-b sidebar">
       <!-- YOUR NAVIGATION GOES HERE -->
       <h1>SearchBox</h1>
       <g:form>

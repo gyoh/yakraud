@@ -6,31 +6,32 @@
   <body>
     <div id="yui-main">
       <div class="yui-b">
-        <div class="yui-g">
+        <div class="yui-g main">
           <!-- YOUR DATA GOES HERE -->
           <div class="title">
             <h1>
               <span>Project Details</span>
             </h1>
             <div class="right_link">
-              <a href="#" class="link">
-                <span>Apply to this Project</span>
-              </a>
+              <span class="yui-button yui-link-button">
+                <span class="first-child">
+                  <g:link controller="project" action="post">Post a Project</g:link>
+                </span>
+              </span>
             </div>
           </div>
-          <div id="block">
+          <div class="block">
             <div class="rounded_container_top">
               <h3>${project.title}</h3>
             </div>
             <div class="rounded_container_middle">
               <p>${project.description}</p>
               <g:form action="apply" id="${project.id}">
-                <dl>
-                  <dt>Snippet</dt>
-                  <dd><g:textArea name="snippet"
-                                  value="${application?.snippet}"/></dd>
-                </dl>
-                <br/>
+                <p>
+                  <label for="snippet">Snippet</label>
+                  <g:textArea id="snippet" class="text" cols="40" rows="4" name="snippet" value="${application?.snippet}"/>
+                  <span class="info">Lots of text can go in here</span>
+                </p>
                 <g:submitButton name="apply" value="Apply"/>
               </g:form>
             </div>
@@ -39,9 +40,8 @@
         </div>
       </div>
     </div>
-    <div class="yui-b">
+    <div class="yui-b sidebar">
       <!-- YOUR NAVIGATION GOES HERE -->
-      <div id="sidebar">
       <h1>Award</h1>
       <ul class="sidebar_links">
         <li>${project.reward}</li>
@@ -56,7 +56,6 @@
         <li>${project.file}</li>
       </ul>
       <div class="sidebar_bottom"><!--sidebar_bottom--></div>
-      </div>
     </div>
   </body>
 </html>

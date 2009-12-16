@@ -63,12 +63,12 @@ strong {
 }
 
 .main {
-    padding-top: 0;
+    /*padding-top: 0;*/
     width: 675px;
     float: left;
     position: relative;
-    left: 10px;
-    left /*\**/: -5px\9;
+    /*left: 10px;*/
+    /*left \*: -5px\9;*/
     min-height: 400px;
 }
 
@@ -92,12 +92,8 @@ strong {
   float:left;
 }
 
-#block {
+.block {
     margin: 0 0 20px 0 ;
-}
-
-#block p {
-    padding: 10px;
 }
 
 .rounded_container_top {
@@ -110,6 +106,7 @@ strong {
 .rounded_container_middle{
     border-left: 1px solid #e1e1e1;
     border-right: 1px solid #e1e1e1;
+    padding: 10px;
 }
 .rounded_container_middle p{
 }
@@ -179,7 +176,7 @@ strong {
     color: #cc0000 !important;
     text-decoration: none !important;
 }
-#hd span{
+#hd .header_links span{
     font-weight: bold;
 }
 #hd small{
@@ -264,38 +261,38 @@ strong {
 /*----- END OF FOOTER -----*/
 
 /*----- SIDEBAR -----*/
-#sidebar {
+.sidebar {
     float: right;
     position:relative;
-    width: 252px;
+    width: 240px;
     background: url(../images/sidebar.png) right -7px no-repeat #F1F1F1;
 }
 
-#sidebar h1{
+.sidebar h1{
     color: #000;
     margin-top: 15px;
     padding-left: 15px;
     font-size: 12px;
 }
 
-#sidebar ul.sidebar_links, ul#sidebar_billing_info{
+.sidebar ul.sidebar_links, ul.sidebar_billing_info{
     border-bottom: 1px solid #e1e1e1;
     margin: 10px 15px 20px 15px;
     padding-bottom: 15px ;
     list-style: none;
 }
 
-#sidebar ul.sidebar_links li {
+.sidebar ul.sidebar_links li {
     list-style: none;
 }
 
-#sidebar ul.sidebar_links li a{
+.sidebar ul.sidebar_links li a{
     background: url(../images/list_arrow.png) no-repeat left -17px ;
     padding: 0 0 0 10px;
     line-height: 2em;
     color: #333;
 }
-#sidebar ul.sidebar_links li a:hover{
+.sidebar ul.sidebar_links li a:hover{
     background: url(../images/list_arrow.png) no-repeat left 2px ;
     color: #333;
 }
