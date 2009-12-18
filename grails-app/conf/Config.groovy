@@ -77,6 +77,6 @@ log4j = {
 
 navigation.main = [
     [title:'Home',order:'0'],
-    [title:'My Yakra',controller:'project',action:'myProjects',order:'1'],
+    [title:'My Yakraud',controller:'myYakraud',action:'listProjects',order:'1'],
     [title:'Search',controller:'search',order:'2']
 ]

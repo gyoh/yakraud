@@ -2,16 +2,29 @@
   <head>
     <title>My Projects for ${user.username}</title>
     <meta name="layout" content="main" />
-    <gui:resources components="tabView, dataTable, richEditor" mode="minimal" />
+    <gui:resources components="tabView, dataTable" mode="minimal" />
   </head>
   <body>
     <div id="yui-main">
       <div class="yui-b">
-        <div class="yui-g">
+        <div class="yui-g main">
+          <!-- YOUR DATA GOES HERE -->
+          <div class="title">
+            <h1>
+              <span>My Projects</span>
+            </h1>
+            <div class="right_link">
+              <span class="yui-button yui-link-button">
+                <span class="first-child">
+                  <g:link controller="project" action="post">Post a Project</g:link>
+                </span>
+              </span>
+            </div>
+          </div>
           <gui:tabView>
-            <gui:tab label="My Projects" active="true">
+            <gui:tab label="Owned Projects" active="true">
               <gui:dataTable
-                id="myProjects"
+                id="ownedProjects"
                 draggableColumns="true"
                 columnDefs="[
                 [key:'id', sortable:true, resizeable: true, label:'ID'],
@@ -19,7 +32,7 @@
                 [key:'reward', type:'currency', sortable:true, resizeable: true, label: 'Reward'],
                 [key:'deadline', type:'date', sortable:true, resizeable: true, label: 'Deadline'],
                 ]"
-                controller="project" action="listOwned"
+                controller="myYakraud" action="listOwnedProjects"
                 rowClickNavigation="true"
                 />
             </gui:tab>
@@ -33,40 +46,21 @@
                 [key:'reward', type:'currency', sortable:true, resizeable: true, label: 'Reward'],
                 [key:'deadline', type:'date', sortable:true, resizeable: true, label: 'Deadline'],
                 ]"
-                controller="project" action="listApplied"
+                controller="myYakraud" action="listAppliedProjects"
                 rowClickNavigation="true"
                 />
             </gui:tab>
-            <gui:tab label="Messages">
+            <gui:tab label="Watchlist">
               <h2>Inside Tab 3</h2>
             </gui:tab>
           </gui:tabView>
         </div>
       </div>
     </div>
-    <!--
-    <p>
-      <g:if test="${flash.message}">
-        <div class="flash">
-          ${flash.message}
-        </div>
-      </g:if>
-      <g:formRemote name="addProject"
-                    url="[controller: 'project', action: 'addProjectAjax']"
-                    update="myProjects">
-        <dl>
-          <dt>Title</dt>
-          <dd><g:textField name="title" /></dd>
-          <dt>Description</dt>
-          <dd><g:textArea name="description" /></dd>
-          <dt>Reward</dt>
-          <dd><g:textField name="reward" /></dd>
-          <dt>Deadline</dt>
-          <dd><g:textField id="deadline" name="deadline" /></dd>
-          <input type="submit" value="Add" />
-        </dl>
-      </g:formRemote>
-    </p>
-    -->
+    <div class="yui-b sidebar">
+      <!-- YOUR NAVIGATION GOES HERE -->
+      <g:render template="/myYakraud/sidebar" />
+      <div class="sidebar_bottom"><!--sidebar_bottom--></div>
+    </div>
   </body>
 </html>

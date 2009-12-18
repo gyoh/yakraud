@@ -6,9 +6,6 @@ html, body {
     margin:0;
 }
 
-/* Make the page full bleed */
-#doc3 { margin:0; }
-
 /* Tags */
 p {
     color: #333;
@@ -63,13 +60,7 @@ strong {
 }
 
 .main {
-    /*padding-top: 0;*/
     width: 675px;
-    float: left;
-    position: relative;
-    /*left: 10px;*/
-    /*left \*: -5px\9;*/
-    min-height: 400px;
 }
 
 .title h1 {
@@ -88,7 +79,7 @@ strong {
   text-align: left;
 }
 
-.title h1{
+.title h1 {
   float:left;
 }
 
@@ -147,47 +138,17 @@ strong {
     font-size: 10px;
     margin: 0 5px;
 }
-#hd .header_links {
+#hd .search {
     float: right;
-    width: 500px;
-    /*background: url(../images/outside_tab.png) no-repeat 222px 0;*/
+    width: 180px;
     position:relative;
-    right: 20px;
-}
-#hd .header_links p {
-    position: relative;
-    top: 40px;
-    text-align:right;
-    clear:both;
-}
-#hd .header_links p a {
-    color: #333 !important;
-}
-#hd .header_links div {
-    float: right;
-    position:relative;
-    right: 8px;
-    top: 22px;
-}
-#hd .header_links div a {
-    color: #000 !important;
-}
-#hd .header_links div a:hover{
-    color: #cc0000 !important;
-    text-decoration: none !important;
-}
-#hd .header_links span{
-    font-weight: bold;
-}
-#hd small{
-    font-size: 15px;
-    color: #cfcfcf;
-    margin: 0 8px;
+    top: 20px;
+    right: 28px;
 }
 
-/*----- START MAIN NAV -----*/
+/*----- START NAVIGATION -----*/
 .navigation {
-    width: 720px;
+    width: 934px;
     height: 29px !important;
     position: relative;
     top: 5px;
@@ -229,7 +190,7 @@ strong {
     padding: 8px 22px 8px 30px;
     background: url(../images/nav_span.png) left -28px no-repeat;
 }
-.navigation ul li a:hover span{
+.navigation ul li a:hover span {
     background: url(../images/nav_span.png) left 1px no-repeat;
 }
 .navigation ul li a.active {
@@ -240,7 +201,21 @@ strong {
     padding-left: 32px;
     background: url(../images/nav_span_active.gif) left -1px no-repeat;
 }
-/*----- END MAIN NAV -----*/
+.navigation div {
+    text-align:right;
+}
+.navigation div a {
+    color: #333 !important;
+}
+.navigation div span {
+    font-weight: bold;
+}
+.navigation div small {
+    font-size: 15px;
+    color: #cfcfcf;
+    margin: 0 8px;
+}
+/*----- END NAVIGATION -----*/
 
 /*----- START FOOTER -----*/
 #ft {
@@ -250,7 +225,7 @@ strong {
     margin: 30px auto;
     border-top: 1px solid #cfcfcf;
 }
-#ft p{
+#ft p {
     color: #777;
     font-size: 11px;
     margin: 3px 10px;
@@ -268,14 +243,14 @@ strong {
     background: url(../images/sidebar.png) right -7px no-repeat #F1F1F1;
 }
 
-.sidebar h1{
+.sidebar h1 {
     color: #000;
     margin-top: 15px;
     padding-left: 15px;
     font-size: 12px;
 }
 
-.sidebar ul.sidebar_links, ul.sidebar_billing_info{
+.sidebar ul.sidebar_links {
     border-bottom: 1px solid #e1e1e1;
     margin: 10px 15px 20px 15px;
     padding-bottom: 15px ;
@@ -286,13 +261,25 @@ strong {
     list-style: none;
 }
 
-.sidebar ul.sidebar_links li a{
+.sidebar ul.sidebar_links li a {
     background: url(../images/list_arrow.png) no-repeat left -17px ;
     padding: 0 0 0 10px;
     line-height: 2em;
     color: #333;
 }
-.sidebar ul.sidebar_links li a:hover{
+.sidebar ul.sidebar_links li a:hover {
+    background: url(../images/list_arrow.png) no-repeat left 2px ;
+    color: #333;
+}
+
+.sidebar ul.sidebar_links li a {
+    background: url(../images/list_arrow.png) no-repeat left -17px ;
+    padding: 0 0 0 10px;
+    line-height: 2em;
+    color: #333;
+}
+
+.sidebar ul.sidebar_links li a:hover {
     background: url(../images/list_arrow.png) no-repeat left 2px ;
     color: #333;
 }
