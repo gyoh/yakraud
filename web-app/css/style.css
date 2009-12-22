@@ -60,7 +60,7 @@ strong {
 }
 
 .main {
-    width: 675px;
+    width: 715px;
 }
 
 .title h1 {
@@ -115,14 +115,14 @@ strong {
     float:left;
     height: 56px;
 }
-#hd .logo h1{
-    margin: 27px 0 0 20px;
+#hd .logo h1 {
+    margin: 27px 0 0 0;
 }
 #hd .logo h1.logo_inside {
-    margin: 17px 0 0 20px;
+    margin: 17px 0 0 0;
 }
 #hd .logo div {
-    margin: 15px 0 0 20px;
+    margin: 15px 0 0 0;
 }
 #hd .logo h3{
     position: absolute;
@@ -143,16 +143,16 @@ strong {
     width: 180px;
     position:relative;
     top: 20px;
-    right: 28px;
+    right: 8px;
 }
 
 /*----- START NAVIGATION -----*/
 .navigation {
-    width: 934px;
+    width: 974px;
     height: 29px !important;
     position: relative;
     top: 5px;
-    left: 20px;
+    /*left: 20px;*/
     z-index: 2;
     clear: both;
 }
@@ -294,7 +294,7 @@ strong {
 #login #lg_form_container {
     position: relative;
     top: 15px;
-    left: 359px;
+    left: 379px;
 }
 
 .lg_outer {
@@ -431,7 +431,9 @@ a.link:hover span {
 }
 
 /* Body */
-#bd { padding: 20px; }
+#bd {
+    padding: 20px 0 0 0;
+}
 
 /* Basic block */
 /*.block { margin-bottom:1.5em; }
