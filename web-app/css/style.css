@@ -351,9 +351,9 @@ strong {
     width: 60px;
 }
 .lg_content p { /* forgot password*/
-                margin: 10px 0 20px 10px;
-                font-size: 11px;
-                line-height: 20px ;
+    margin: 10px 0 20px 10px;
+    font-size: 11px;
+    line-height: 20px ;
 }
 .lg_bottom {
     background: url(../images/lg_bottom.png) no-repeat;
@@ -530,3 +530,19 @@ abbr, acronym { border-bottom:1px dotted #000; cursor:help; }
 .text-right { text-align:right; }
 .text-center { text-align:center; }
 
+.description {
+    margin: 10px;
+}
+
+.details_button {
+    margin: 10px;
+}
+
+.yui-link-button-focus a:focus,
+.yui-submit-button-focus button:focus {
+    outline: none;
+}
+
+.yui-link-button a:hover {
+    text-decoration: none;
+}

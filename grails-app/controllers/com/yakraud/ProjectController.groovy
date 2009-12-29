@@ -123,23 +123,22 @@ class ProjectController {
         def projects
         def count
         if (params.q) {
-            def searchResult = Project.search(params.q, params)
-            projects = searchResult.results
-            count = searchResult.total
+            def result = Project.search(params.q, params)
+            projects = result.results
+            count = result.total
         } else {
             projects = Project.list(params)
             count = Project.count()
         }
 
-        def list = []
-        projects.each {
-            list << [
+        def list = projects.collect {
+            [
                 id: it.id,
                 title: it.title,
                 description: it.description,
                 reward: it.reward,
                 deadline: new SimpleDateFormat("MMM dd, yyyy").format(it.deadline),
-                //dataUrl: g.createLink(controller: 'project', action: 'details') + "/$it.id"
+                //dataUrl: g.createLink(action: 'details') + "/$it.id"
                 dataUrl: g.createLink(action: 'showDescription') + "/$it.id"
             ]
         }

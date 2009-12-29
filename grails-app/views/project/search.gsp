@@ -14,11 +14,10 @@
               <span>Projects</span>
             </h1>
             <div class="right_link">
-              <span class="yui-button yui-link-button">
-                <span class="first-child">
-                  <g:link controller="project" action="post">Post a Project</g:link>
-                </span>
-              </span>
+              <a id="postlink" href="${createLink(action:'post')}">Post a Project</a>
+              <g:javascript>
+                new YAHOO.widget.Button("postlink");
+              </g:javascript>
             </div>
           </div>
           <gui:dataTable

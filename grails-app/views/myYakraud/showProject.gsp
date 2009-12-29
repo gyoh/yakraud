@@ -14,16 +14,12 @@
               <span>Project Details</span>
             </h1>
             <div class="right_link">
-              <span class="yui-button yui-link-button">
-                <span class="first-child">
-                  <g:link action="listProjects">Back to Project List</g:link>
-                </span>
-              </span>
-              <span class="yui-button yui-link-button">
-                <span class="first-child">
-                  <g:link action="editProject">Edit Project</g:link>
-                </span>
-              </span>
+              <a id="listlink" href="${createLink(action:'listProjects')}">Back to My Projects</a>
+              <a id="editlink" href="<g:createLink action='editProject' id='${params.id}' />">Edit Project</a>
+              <g:javascript>
+                new YAHOO.widget.Button("listlink");
+                new YAHOO.widget.Button("editlink");
+              </g:javascript>
             </div>
           </div>
           <gui:tabView>
