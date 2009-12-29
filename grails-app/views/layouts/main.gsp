@@ -4,15 +4,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Yakraud &raquo; <g:layoutTitle /></title>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/2.8.0r4/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css" />
-    <link rel="stylesheet" href="http://yui.yahooapis.com/2.8.0r4/build/base/base-min.css" type="text/css" />
-    <link rel="stylesheet" href="http://yui.yahooapis.com/2.8.0r4/build/button/assets/skins/sam/button.css" type="text/css" />
+    <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css" />
+    <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/base/base-min.css" type="text/css" />
+    <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/button/assets/skins/sam/button.css" type="text/css" />
     <!--<link rel="stylesheet" href="${resource(dir:'css',file:'main.css')}" type="text/css" />-->
     <link rel="stylesheet" href="${resource(dir:'css',file:'style.css')}" type="text/css" />
     <link rel="shortcut icon" href="${resource(dir:'images',file:'favicon.ico')}" type="image/x-icon" />
   <g:layoutHead />
   <g:javascript library="yui" />
-  <script type="text/javascript" src="http://yui.yahooapis.com/2.8.0r4/build/button/button-min.js"></script>
+  <script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/button/button-min.js"></script>
   <nav:resources override="true" />
 </head>
 <body class="yui-skin-sam">
@@ -27,7 +27,7 @@
         </h1>
       </div>
       <div class="search">
-        <g:form controller="search" action="index">
+        <g:form controller="project" action="search">
           <g:textField class="text" title="Search" name="q" value="${params.q}" />
           <!--<g:submitButton name="search" value="Search"/>-->
         </g:form>

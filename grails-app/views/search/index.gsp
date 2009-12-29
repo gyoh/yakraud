@@ -9,8 +9,8 @@
         <div class="yui-g main">
           <!-- YOUR DATA GOES HERE -->
           <g:if test="${searchResult?.results}">
-            <g:render template="/suggestions" />
-            <g:render template="/pagination" />
+            <g:render template="/search/suggestions" />
+            <g:render template="/search/pagination" />
             <br/>
             <div class="db1">
               <g:each var="result" in="${searchResult.results}" status="hitNum">
@@ -64,7 +64,7 @@
                 </div>
               </g:each>
             </div>
-            <g:render template="/pagination" />
+            <g:render template="/search/pagination" />
           </g:if>
         </div>
       </div>

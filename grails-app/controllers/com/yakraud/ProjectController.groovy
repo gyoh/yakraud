@@ -2,6 +2,7 @@ package com.yakraud
 
 import org.codehaus.groovy.grails.plugins.springsecurity.Secured
 import grails.converters.JSON
+import java.text.SimpleDateFormat
 
 class ProjectDetailsCommand implements Serializable {
 
@@ -113,6 +114,48 @@ class ProjectController {
         render(template: "myProjects",
                collection: user.ownedProjects,
                var: "project")
+    }
+
+    def search = {
+    }
+    
+    def searchAjax = {
+        def projects
+        def count
+        if (params.q) {
+            def searchResult = Project.search(params.q, params)
+            projects = searchResult.results
+            count = searchResult.total
+        } else {
+            projects = Project.list(params)
+            count = Project.count()
+        }
+
+        def list = []
+        projects.each {
+            list << [
+                id: it.id,
+                title: it.title,
+                description: it.description,
+                reward: it.reward,
+                deadline: new SimpleDateFormat("MMM dd, yyyy").format(it.deadline),
+                //dataUrl: g.createLink(controller: 'project', action: 'details') + "/$it.id"
+                dataUrl: g.createLink(action: 'showDescription') + "/$it.id"
+            ]
+        }
+
+        def data = [
+            totalRecords: count,
+            results: list
+        ]
+
+        response.setHeader("Cache-Control", "no-store")
+        render data as JSON
+    }
+
+    def showDescription = {
+        def project = Project.get(params.id)
+        [project: project]
     }
 
     def listAjax = {

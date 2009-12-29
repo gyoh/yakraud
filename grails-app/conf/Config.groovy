@@ -78,5 +78,5 @@ log4j = {
 navigation.main = [
     [title:'Home',order:'0'],
     [title:'My Yakraud',controller:'myYakraud',action:'listProjects',order:'1'],
-    [title:'Search',controller:'search',order:'2']
+    [title:'Projects',controller:'project',action:'search',order:'2']
 ]
